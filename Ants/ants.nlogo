@@ -25,6 +25,7 @@ to add-ants [n]
     set carried-mat 0  ;; carry nothing
     set last-mat 0
     set kill-request? false
+    set distance-to-transport-left 0
     if random-location-birth? [
       setxy random-xcor random-ycor
     ]
@@ -106,12 +107,17 @@ to move-mat
     ;; drop carried-mat
     set mat carried-mat
     set last-mat carried-mat
-    set carried-mat 0
+    set carried-mat 0 report
     go-back
     set distance-to-transport-left distance-to-transport
   ] [
     random-walk
   ]
+end
+
+to-report droppable-patch? [p]
+  report [mat] of p = 0 
+         and count [neighbors] of p with [mat = cm] >= minimum-same-mats-at-drop
 end
 
 to go-back
@@ -179,7 +185,7 @@ population
 population
 0
 1000
-1000
+6
 1
 1
 NIL
@@ -194,7 +200,7 @@ num-labels
 num-labels
 1
 10
-10
+1
 1
 1
 NIL
@@ -299,7 +305,7 @@ distance-to-transport
 distance-to-transport
 0
 100
-3
+47
 1.
 1
 NIL
@@ -325,7 +331,7 @@ minimum-same-mats-at-drop
 minimum-same-mats-at-drop
 0
 8
-3
+4
 1
 1
 NIL
