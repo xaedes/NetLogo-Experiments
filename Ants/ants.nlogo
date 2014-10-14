@@ -129,11 +129,11 @@ end
 GRAPHICS-WINDOW
 221
 10
-828
-638
-16
-16
-18.1
+765
+575
+64
+64
+4.14
 1
 10
 1
@@ -143,10 +143,10 @@ GRAPHICS-WINDOW
 1
 1
 1
--16
-16
--16
-16
+-64
+64
+-64
+64
 1
 1
 1
@@ -177,9 +177,9 @@ SLIDER
 89
 population
 population
-1
+0
 1000
-7
+1000
 1
 1
 NIL
@@ -194,7 +194,7 @@ num-labels
 num-labels
 1
 10
-2
+10
 1
 1
 NIL
@@ -286,7 +286,7 @@ SWITCH
 283
 always-change-mat?
 always-change-mat?
-0
+1
 1
 -1000
 
@@ -299,7 +299,7 @@ distance-to-transport
 distance-to-transport
 0
 100
-6
+3
 1.
 1
 NIL
@@ -312,7 +312,7 @@ SWITCH
 362
 random-location-birth?
 random-location-birth?
-0
+1
 1
 -1000
 
@@ -324,8 +324,8 @@ SLIDER
 minimum-same-mats-at-drop
 minimum-same-mats-at-drop
 0
-7
-7
+8
+3
 1
 1
 NIL
